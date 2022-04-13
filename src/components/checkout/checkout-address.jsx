@@ -100,6 +100,14 @@ const CheckoutAddress = ({ controller }) => {
         formik={controller}
         defaultValue={controller.values.phone}
       />
+      <Field
+        label="GSTIN"
+        className="mt-4"
+        autocomplete="tel"
+        name="gstin"
+        formik={controller}
+        defaultValue={controller.values.gstin}
+      />
     </div>
   )
 }

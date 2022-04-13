@@ -15,6 +15,7 @@ const Validator = {
     last_name: Yup.string().required(ERRORS.REQUIRED),
     email: Yup.string().email(ERRORS.INVALID_EMAIL).required(ERRORS.REQUIRED),
     phone: Yup.string().optional(),
+    gstin: Yup.string().optional(),
     password: Yup.string().required(ERRORS.REQUIRED),
   }),
   checkout: {
@@ -32,6 +33,7 @@ const Validator = {
       province: Yup.string().optional(),
       postal_code: Yup.string().required(ERRORS.REQUIRED),
       phone: Yup.string().optional(),
+      gstin: Yup.string().optional(),
     }).required(ERRORS.REQUIRED),
     billingSchema: Yup.object({
       first_name: Yup.string().required(ERRORS.REQUIRED),

@@ -25,6 +25,7 @@ export const useShippingAddressForm = setState => {
       province: cart?.shipping_address?.province || "",
       postal_code: cart?.shipping_address?.postal_code || "",
       phone: cart?.shipping_address?.phone || customer?.phone || "",
+      gstin: cart?.shipping_address?.gstin || customer?.gstin || "",
     },
     validationSchema: Validator.checkout.shippingSchema,
     onSubmit: async (values, { setSubmitting, setStatus }) => {
