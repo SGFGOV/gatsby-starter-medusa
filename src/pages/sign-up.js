@@ -66,6 +66,14 @@ const SignUp = () => {
             defaultValue={registerForm.values.phone}
           />
           <Field
+            label="GSTIN (optional)"
+            autocomplete="tel"
+            className="mb-4"
+            name={"gstin"}
+            formik={registerForm}
+            defaultValue={registerForm.values.gstin}
+          />
+          <Field
             label="Password"
             type="password"
             autocomplete="new-password"

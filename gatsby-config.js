@@ -49,5 +49,23 @@ module.exports = {
           process.env.GATSBY_MEDUSA_BACKEND_URL || `http://localhost:9000`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gatsby Medusa`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/icons/logo.svg`
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/about-us/`, `/projects/*`],
+    },
+  },
   ],
 }
